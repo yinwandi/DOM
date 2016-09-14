@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+      *{
+      	margin:0px;
+      	padding:0px;
+      }
+      .bg{
+      	width:500px;
+      	height:500px;
+      	background-color:#aaa;
+      }
+      .cen{
+      	width:400px;
+      	height:400px;
+      	background-color: blue;
+
+      }
+      .sm{
+      	width:300px;
+      	height:300px;
+      	background-color:red;
+      }
+	</style>
+</head>
+<body>
+	<div class="bg">
+		<div class="cen">
+			<div class="sm">
+				
+			</div>
+		</div>
+	</div>
+	<script>
+       var obg=document.querySelector(".bg")
+       var ocen=document.querySelector(".cen")
+       var osm=document.querySelector(".sm")
+       function fun1(){
+         alert("大框的点击")
+       }
+        function fun2(event){
+        	event.stopPropagation()
+         alert("中框的点击")
+       }
+        function fun3(){
+         alert("小框的点击")
+       }
+       obg.addEventListener("click",fun1,false)
+       ocen.addEventListener("click",fun2,false)
+       osm.addEventListener("click",fun3,false)
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value="添加1" id="but1">
+	<input type="button" value="添加2" id="but2">
+	<script>
+       var obut1=document.querySelector("#but1")
+       var obut2=document.querySelector("#but2")
+       obut1.onclick=function(){
+       	alert("fist,1click")
+       }
+        obut1.onclick=function(){
+       	alert("sec,2click")
+       }
+       obut2.addEventListener("click",function(){
+       	alert("fist,click")
+       },false)
+       obut2.addEventListener("click",function(){
+       	alert("secen,click")
+       },false)
+
+
+	</script>
+
+</body>
+</html>

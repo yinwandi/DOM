@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+       .bg{
+       	width:300px;
+       	height:300px;
+       	background-color: #aaa;
+
+       }
+       .sm{
+       	width:100px;
+       	height:100px;
+       	background-color: #f00;
+       }
+	</style>
+</head>
+<body>
+	<div class="bg">
+		<div class="sm"></div>
+	</div>
+	<script src="script/jquery.js"></script>
+	 <script>
+	var n=0
+	//用原生的方法实现mouseenter
+ //     var obg=document.querySelector(".bg")
+     obg.addEventListener("mouseover",function(){
+     	console.log(n++)
+ //     // },false)
+    obg.onmouseover=function(){
+    	console.log(n++)
+    }
+ //     obg.addEventListener("mouseenter",function(){
+ //     	console.log(n++)
+ //     },false)
+     
+  //用jQuery的方法实现mouseenter
+      $(".bg").mouseenter(function(){
+      	console.log(n++)
+      })
+	 </script>
+</body>
+</html>

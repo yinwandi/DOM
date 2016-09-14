@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value="添加" class="but">
+	<input type="button" value="删除" class="remove">
+	<script>
+	var obut=document.querySelector(".but")
+	var oremove=document.querySelector(".remove")
+	obut.addEventListener("click",fun,false)
+		
+	function fun(){
+        alert("hello")
+	}
+    oremove.addEventListener("click",function(){
+    	obut.removeEventListener("click",fun,false)
+    	alert("移出")
+    })
+
+
+	</script>
+</body>
+</html>
